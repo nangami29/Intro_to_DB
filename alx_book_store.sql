@@ -2,6 +2,7 @@
 CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 USE alx_book_store;
+DROP TABLE IF EXISTS Order_Details, Orders, Customers, Books, Authors;
 
 CREATE TABLE Authors (
     author_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,8 +40,7 @@ CREATE TABLE Order_Details (
     order_detail_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     book_id INT,
-    quantity INT NOT NULL,
-    price_at_purchase DOUBLE NOT NULL,
+    quantity DOUBLE,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
