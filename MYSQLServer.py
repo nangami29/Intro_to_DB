@@ -16,7 +16,7 @@ CREATE DATABASE IF NOT EXISTS alx_book_store
 
 print("Database 'alx_book_store' created successfully!")
 
-#connect with the database
+# re-connect with the database created
 mydb=mysql.connector.connect(
     host='localhost',
     user='root',
